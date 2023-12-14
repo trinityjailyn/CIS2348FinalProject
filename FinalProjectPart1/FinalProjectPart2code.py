@@ -156,7 +156,7 @@ if __name__ == '__main__':
                     item_type = row[2]
                     damaged = row[3]
                     # Store these values in the current_item's dictionary
-                    item_dictionary[item_id]['manufacturer'] =    manufacturer_name.strip()
+                    item_dictionary[item_id]['manufacturer'] = manufacturer_name.strip()
                     item_dictionary[item_id]['item_type'] = item_type.strip()
                     item_dictionary[item_id]['damaged'] = damaged
                 # If the current trin_file is the PriceList.csv
@@ -204,7 +204,7 @@ if __name__ == '__main__':
     # Loop until user enters 'q'
     while user != 'q':
         # Prompt the user for u_input
-        user = input("\nPlease enter an current_item manufacturer and current_item type (ex: Apple laptop) or enter 'q' to quit:\n")
+        user = input("\nPlease enter an item manufacturer and item type (ex: Apple laptop) or enter 'q' to quit:\n")
         # If the user enters 'q', break the loop and end the program
         if user == 'q':
            break
@@ -235,7 +235,7 @@ if __name__ == '__main__':
             # Check if either manufacturer or type is not selected or if u_input is flagged as bad
             if not select_man or not select_item_type or wrong_input:
                # If so, print an error message
-               print("No such current_item in inventory")
+               print("No such item in inventory")
             else:
                 # Define a function to get the price from each current_item
                 def get_service_price(x):
@@ -243,7 +243,7 @@ if __name__ == '__main__':
                 # Sort the keys of the item_dictionary dictionary by the price of each current_item
                 keys = sorted(item_dictionary.keys(), key=get_service_price)
                 # Initialize lists to store matching and similar item_dictionary
-                match = []
+                match = [] 
                 similar = {}
                 # Iterate over each current_item in the sorted keys list
                 for current_item in keys:
